@@ -1,7 +1,7 @@
 Ausung
 ======
 
-A Data Visualization of Media Sentiments.
+A Data Visualization of Media Sentiments. [Demo](https://youtu.be/o08t8dhN-Ys)
 
 Screenshot
 ----------
