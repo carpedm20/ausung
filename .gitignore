@@ -1,0 +1,31 @@
+*py[co]
+*.txt
+*.json
+
+hali*
+.bitbucket_git
+
+#test
+*.log
+*.sh
+*test*
+*backup*
+
+#thrift
+*thrift
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+
+# Vim
+.*.sw[op]

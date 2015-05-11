@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% include 'script.html' %}
+
+<div id="layout" class="pure-g">
+  <div class="sidebar pure-u-1 pure-u-md-3-4">
+    <div class="search-body">
+      <h2 class="center">별점수 누적 - {{ query }}</h2>
+      <div id="chartdiv3" class="search-chart" style="width:100%; height:600px;"></div>
+      <h2 class="center">긍부정 평균 - {{ query }}</h2>
+      <div id="chartdiv1" class="search-chart" style="width:100%; height:600px;"></div>
+      <h2 class="center">긍부정 누적 - {{ query }}</h2>
+      <div id="chartdiv2" class="search-chart" style="width:100%; height:600px;"></div>
+    </div>
+  </div>
+
+  <div id="comments-wrapper" class="content pure-u-1 pure-u-md-1-4" id="yui_3_17_2_1_1431242460420_14">
+    <div id="comments" class="pure-g"> </div>
+  </div>
+</div>
+
+{% endblock %}

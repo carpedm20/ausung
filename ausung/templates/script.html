@@ -1,0 +1,89 @@
+<script>
+var rank_str = "{{ rank }}",
+    ranks = rank_str.split(',');
+  query = "{{ query }}";
+
+var data = {{ media_dic }};
+var star_dic = {{ star_dic }};
+
+function mean(arr) {
+    var i,
+        sum = 0,
+        len = arr.length;
+    for (i = 0; i < len; i++) {
+        sum += arr[i];
+    }
+    return sum / len;
+}
+
+function cumulative_formula(arr) {
+    var hist = {1:0, 2:0, 3:0, 4:0, 5:0};
+
+    var len = arr.length;
+    for (i = 0; i < len; i++) {
+        hist[arr[i]] += 1;
+    }
+    var i,
+        sum = 0;
+    /*for (i = 0; i < len; i++) {
+        sum += (arr[i]-3) * hist[arr[i]];
+    }*/
+
+    for (i in hist) {
+      sum += hist[i] * (i-2.7);
+    }
+
+    return sum;
+}
+
+var data_sets1 = [];
+var data_sets2 = [];
+
+for (var media_oid in data) {
+  media = data[media_oid];
+  var current_data1 = [];
+  var current_data2 = [];
+
+  for (var i in media) {
+    current_data1.push({
+        //date: new Date(i*1000 * 86400*7),
+        date: new Date(i*1000 * 86400),
+        value: mean(media[i]),
+        volume: media[i].length,
+    });
+    current_data2.push({
+        //date: new Date(i*1000 * 86400*7),
+        date: new Date(i*1000 * 86400),
+        value: cumulative_formula(media[i]),
+        volume: media[i].length,
+    });
+  }
+
+  data_sets1.push([media_oid, current_data1]);
+  data_sets2.push([media_oid, current_data2]);
+}
+
+var data_sets3 = [];
+
+for (var star_idx in star_dic) {
+  star = star_dic[star_idx];
+  var current_data = [];
+
+  for (var i in star) {
+    current_data.push({
+        //date: new Date(i*1000 * 86400*7),
+        date: new Date(i*1000 * 86400),
+        value: star[i] * (star_idx - 2),
+        volume: star[i],
+    });
+  }
+
+  data_sets3.push([star, current_data]);
+}
+
+{% autoescape false %}
+var comments = {{comments}};
+var times = Object.keys(comments);
+{% endautoescape %}
+
+</script>

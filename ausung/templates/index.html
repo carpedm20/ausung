@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="splash-container">
+  <div class="splash">
+    <img width="60%" src="{{  url_for('static', filename='img/logo.png') }}" />
+    <form id="searchForm" class="pure-form pure-form-stacked" action="">
+      <fieldset>
+        <input id="serachInput" type="text" name="query" class="main-search" placeholder="아이유">
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <div class="content content-intro">
+    <h2 class="content-head is-center">We consider reviews and ratings</h2>
+
+    <div class="pure-g">
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-rocket"></i>
+          Important than any others
+        </h3>
+        <div class="content">
+          <div class="intro-img-container1 is-center">
+            <img id="intro-img1" class="max-height-img" src="{{ url_for('static', filename='img/naver2.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-mobile"></i>
+          As a core technique
+        </h3>
+        <div class="content">
+          <div class="intro-img-container1 is-center">
+            <img id="intro-img2" class="max-height-img" src="{{ url_for('static', filename='img/watcha.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-th-large"></i>
+          We share and agree with it
+        </h3>
+        <div class="content">
+          <div class="intro-img-container2 is-center">
+            <img id="intro-img3" class="max-height-img" src="{{ url_for('static', filename='img/critic_from_user.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-check-square-o"></i>
+          Critics also share it
+        </h3>
+        <div class="content">
+          <div class="intro-img-container2 is-center">
+            <img id="intro-img4" class="max-height-img" src="{{ url_for('static', filename='img/critic_from_critic.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ribbon l-box-lrg pure-g">
+    <div class="pure-u-1">
+      <h2 class="content-head content-head-ribbon is-center">Recently, however, lots of questions are made</h2>
+    </div>
+
+    <div class="pure-g">
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-th-large"></i>
+          A sharp criticism on critics
+        </h3>
+        <div class="content">
+          <div class="intro-img-container3 is-center">
+            <img id="intro-img5" class="max-height-img" src="{{ url_for('static', filename='img/question1.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+      <div class="l-box pure-u-1 pure-u-md-1-2">
+        <h3 class="content-subhead is-center">
+          <i class="fa fa-check-square-o"></i>
+          A disappointed comment on critics
+        </h3>
+        <div class="content">
+          <div class="intro-img-container3 is-center">
+            <img id="intro-img6" class="max-height-img" src="{{ url_for('static', filename='img/question2.png') }}">
+          </div>
+        </div>
+        <p>
+        Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+    <h2 class="content-head is-center">Dolore magna aliqua. Uis aute irure.</h2>
+
+    <div class="pure-g">
+        <div class="l-box-lrg pure-u-1 pure-u-md-2-5">
+            <form class="pure-form pure-form-stacked">
+                <fieldset>
+
+                    <label for="name">Your Name</label>
+                    <input id="name" type="text" placeholder="Your Name">
+
+
+                    <label for="email">Your Email</label>
+                    <input id="email" type="email" placeholder="Your Email">
+
+                    <label for="password">Your Password</label>
+                    <input id="password" type="password" placeholder="Your Password">
+
+                    <button type="submit" class="pure-button">Sign Up</button>
+                </fieldset>
+            </form>
+        </div>
+
+        <div class="l-box-lrg pure-u-1 pure-u-md-3-5">
+            <h4>Contact Us</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.
+            </p>
+
+            <h4>More Information</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+        </div>
+    </div>
+  </div>
+
+  <div class="footer l-box is-center">
+    Created by <a id="carpedm20" href="https://carpedm20.github.io" target="_blank">carpedm20</a>
+  </div>
+
+</div>
+
+
+{% endblock %}
