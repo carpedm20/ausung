@@ -3,7 +3,7 @@ Ausung
 
 A Data Visualization of Media Sentiments. [Demo](https://youtu.be/o08t8dhN-Ys)
 
-Analysis of 90,000,000 comments and 1,000,000 articles from NAVER news.
+Use [ReviewDuk](https://github.com/carpedm20/reviewduk) for Korean Sentiment Analysis and crawl more than 90,000,000 comments and 1,000,000 articles from NAVER news.
 
 
 Screenshot
